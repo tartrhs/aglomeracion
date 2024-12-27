@@ -59,6 +59,57 @@
             z-index: 999;
             display: none; /* Oculto por defecto */
         }
+        /* Estilo para el popup modal */
+        .modal {
+            display: none; /* Oculto por defecto */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            width: 90%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .modal h3 {
+            margin: 0 0 10px;
+        }
+
+        .modal ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .modal ul li {
+            margin: 10px 0;
+        }
+
+        .modal ul li a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .modal ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo para la superposición */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
     </style>
     <script>
        function openPopup(albumLinks) {
@@ -456,5 +507,34 @@
 
 
     </div>
+     <!-- Superposición y popup modal -->
+    <div class="overlay" onclick="closePopup()"></div>
+    <div class="modal" id="popup">
+        <h3>Transmisión en línea y compra</h3>
+        <ul id="popup-content">
+            <!-- Los enlaces se insertarán aquí dinámicamente -->
+        </ul>
+        <button onclick="closePopup()">Cerrar</button>
+    </div>
+
+    <script>
+        function openPopup(albumLinks) {
+            // Inserta los enlaces en el popup
+            const popupContent = document.getElementById('popup-content');
+            popupContent.innerHTML = albumLinks.map(link => `
+                <li><a href="${link.url}" target="_blank">${link.platform}</a></li>
+            `).join('');
+
+            // Muestra el popup y la superposición
+            document.querySelector('.overlay').style.display = 'block';
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            // Oculta el popup y la superposición
+            document.querySelector('.overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
