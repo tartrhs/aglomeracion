@@ -18,14 +18,20 @@
         a:hover {
             text-decoration: underline;
         }
-         img {
+        img {
             width: 50px; /* Ajusta el tamaño de la imagen */
             float: left;
             margin-right: 20px; /* Espacio entre la imagen y el texto */
             margin-bottom: 10px; /* Espacio debajo de la imagen */
         }
         .contenido {
-            overflow: hidden; /* Esto limpia el float y permite que el contenido continúe adecuadamente */
+            overflow: hidden; /* Limpia el float */
+            margin-bottom: 20px;
+        }
+        /* Opcional: espacio después de las imágenes si es necesario */
+        .texto-contenedor {
+            clear: both; /* Evita que otros elementos floten alrededor */
+            margin-top: 10px; /* Espacio adicional si es necesario */
         }
     </style>
 </head>
@@ -33,11 +39,10 @@
     <div class="contenido">
         <img src="0036394745_20.jpg" alt="">
  
-        <div>
-                </div>
-        <p>música (early xxi century music)</p>
-        <p>since 2018</p>
-            </div>
+        <div class="texto-contenedor">
+            <p>música (early xxi century music)</p>
+            <p>since 2018</p>
+        </div>
         <div>
             <p><a href="enlaces.html">enlaces</a></p>
             <p><a href="catálogo.html">catálogo</a></p>
