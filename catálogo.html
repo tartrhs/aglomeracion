@@ -61,17 +61,48 @@
         }
     </style>
     <script>
-        function openPopup(albumLinks) {
-            // Abre una nueva ventana emergente con enlaces específicos del álbum
-            const popupWindow = window.open("", "Popup", "width=400,height=300");
-            popupWindow.document.write("<h3>Plataformas disponibles:</h3>");
-            popupWindow.document.write("<ul>");
-            albumLinks.forEach(link => {
-                popupWindow.document.write(`<li><a href="${link.url}" target="_blank">${link.platform}</a></li>`);
-            });
-            popupWindow.document.write("</ul>");
-            popupWindow.document.close();
-        }
+       function openPopup(albumLinks) {
+    // Abre una nueva ventana emergente con enlaces específicos del álbum
+    const popupWindow = window.open("", "Popup", "width=400,height=300");
+    popupWindow.document.write(`
+        <html>
+            <head>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        font-size: 10pt;
+                    }
+                    a {
+                        color: #0066cc;
+                        text-decoration: none;
+                    }
+                    a:hover {
+                        text-decoration: underline;
+                    }
+                    h3 {
+                        margin-bottom: 10px;
+                    }
+                    ul {
+                        list-style-type: none;
+                        padding: 0;
+                    }
+                    li {
+                        margin: 5px 0;
+                    }
+                </style>
+            </head>
+            <body>
+                <h3>Plataformas disponibles:</h3>
+                <ul>
+                    ${albumLinks.map(link => `
+                        <li><a href="${link.url}" target="_blank">${link.platform}</a></li>
+                    `).join('')}
+                </ul>
+            </body>
+        </html>
+    `);
+    popupWindow.document.close();
+}
     </script>
 </head>
 <body>
