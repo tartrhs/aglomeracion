@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>catálogo</title>
+    <title>Catálogo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,127 +15,183 @@
         i {
             font-style: italic;
         }
-
-        .modal {
-            display: none; 
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0,0,0); 
-            background-color: rgba(0,0,0,0.4); 
-            padding-top: 60px;
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 400px;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
+        a {
             text-decoration: none;
+            color: #0000EE;
             cursor: pointer;
-        }
-
-        .digital-link {
-            color: red;
-            cursor: pointer;
-            text-decoration: underline;
         }
     </style>
+    <script>
+        function openPopup(albumLinks) {
+            // Abre una nueva ventana emergente con enlaces específicos del álbum
+            const popupWindow = window.open("", "Popup", "width=400,height=300");
+            popupWindow.document.write("<h3>Plataformas disponibles:</h3>");
+            popupWindow.document.write("<ul>");
+            albumLinks.forEach(link => {
+                popupWindow.document.write(`<li><a href="${link.url}" target="_blank">${link.platform}</a></li>`);
+            });
+            popupWindow.document.write("</ul>");
+            popupWindow.document.close();
+        }
+    </script>
 </head>
 <body>
     <div>
-        <p><b>sin aspavientos & trío hogar</b> <i>sin aspavientos & trío hogar</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>falso documental</b> <i>ausencia</i> <span class="digital-link" onclick="openModal('digital')">| digital</span></p>
-        <p><b>trío hogar</b> <i>trío hogar en vivo 2024</i> <span class="digital-link" onclick="openModal('digital')">| digital</span></p>
-        <p><b>aria</b> <i>aria en vivo 2023</i> <span class="digital-link" onclick="openModal('digital')">| digital</span></p>
-        <p><b>felipe araya & nicolás carrasco</b> <i>machallí</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>falso documental</b> <i>demos, etc</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>segunda mordida</b> <i>segunda mordida en vivo 2022</i> <span class="digital-link" onclick="openModal('digital')">| digital</span></p>
-        <p><b>flügel kúm</b> <i>demos, etc</i> <span class="digital-link" onclick="openModal('digital')">| digital</span></p>
-        <p><b>winétt</b> <i>7 copas</i> <span class="digital-link" onclick="openModal('digital')">| digital</span></p>
-        <p><b>mube</b> <i>eyuh</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>alfonso carrera</b> <i>declamación poética y arreglo musical, sqvatqhcp, chillán 22/12/22</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>aria</b> <i>teofilia</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>halita</b> <i>quiste</i> | trabajo escrito</p>
-        <p><b>halita</b> <i>invierno 2022</i> | cassette</p>
-        <p><b>v/a</b> <i>por siempre</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> & fanzine</p>
-        <p><b>r.r.o.o, falso documental</b> <i>si pudiera</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>benjamín alberto</b> <i>ruidos de la construcción y recuerdos de la niñez</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>aerodynamo</b> <i>iris</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>winétt</b> <i>llámame</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>ígora</b> <i>cenotafio</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>televidencia</b> <i>canal infinito</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>v/a</b> <i>en esta ciudad no llueve, nadie llora</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette & fanzine</p>
-        <p><b>r.r.o.o</b> <i>proyecto inmobiliario</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>ígora</b> <i>seizure</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>vilaret</b> <i>efigies</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>ígora</b> <i>orgánula cetus</i> <span class="digital-link" onclick="openModal('digital')">| digital</span></p>
-        <p><b>emilia</b> <i>coronas de laurel</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>vilaret</b> <i>tres veces té</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>josé tagle</b> <i>entre tus brazos</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>infantis</b> <i>cariño</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>v/a</b> <i>ira vol. 2</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>v/a</b> <i>ira vol. 1</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>última inocencia</b> <i>última inocencia</i> <span class="digital-link" onclick="openModal('digital')">| digital</span></p>
-        <p><b>lluvia morada</b> <i>yukiko's death scene</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>v/a</b> <i>una elegía, una pantalla, y un rezo interminable con tu nombre</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>parc fermé</b> <i>métodos</i> <span class="digital-link" onclick="openModal('digital')">| digital</span></p>
-        <p><b>parc fermé</b> <i>corazones artificiales</i> <span class="digital-link" onclick="openModal('digital')">| digital</span></p>
-        <p><b>falso documental</b> <i>puedes cambiar de todas las formas, y aún serás el mismo</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>goramen égigo</b> <i>el país que no existe</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>emilia</b> <i>negación, reconocimiento</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>flügel kúm</b> <i>no somos irrompibles</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>mil grullas</b> <i>inhumar/soterrar</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>winétt</b> <i>persona</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
-        <p><b>winétt & mil grullas</b> <i>aglomeración</i> <span class="digital-link" onclick="openModal('digital')">| digital</span> | cassette</p>
+        <p>
+            <b>sin aspavientos & trío hogar</b> <i>sin aspavientos & trío hogar</i> | 
+            <a onclick="openPopup([
+                {platform: 'Spotify', url: 'https://spotify.com/album/sin-aspavientos'},
+                {platform: 'Bandcamp', url: 'https://bandcamp.com/album/sin-aspavientos'},
+                {platform: 'Apple Music', url: 'https://apple.com/music/album/sin-aspavientos'}
+            ])">digital</a> | cassette
+        </p>
+        <p>
+            <b>falso documental</b> <i>ausencia</i> | 
+            <a onclick="openPopup([
+                {platform: 'Spotify', url: 'https://spotify.com/album/ausencia'},
+                {platform: 'Bandcamp', url: 'https://bandcamp.com/album/ausencia'},
+                {platform: 'Apple Music', url: 'https://apple.com/music/album/ausencia'}
+            ])">digital</a>
+        </p>
+        <p>
+            <b>trío hogar</b> <i>trío hogar en vivo 2024</i> | 
+            <a onclick="openPopup([
+                {platform: 'Spotify', url: 'https://spotify.com/album/trio-hogar-en-vivo-2024'},
+                {platform: 'Bandcamp', url: 'https://bandcamp.com/album/trio-hogar-en-vivo-2024'},
+                {platform: 'Apple Music', url: 'https://apple.com/music/album/trio-hogar-en-vivo-2024'}
+            ])">digital</a>
+        </p>
+        <p>
+            <b>aria</b> <i>aria en vivo 2023</i> | 
+            <a onclick="openPopup([
+                {platform: 'Spotify', url: 'https://spotify.com/album/aria-en-vivo-2023'},
+                {platform: 'Bandcamp', url: 'https://bandcamp.com/album/aria-en-vivo-2023'},
+                {platform: 'Apple Music', url: 'https://apple.com/music/album/aria-en-vivo-2023'}
+            ])">digital</a>
+        </p>
+        <p>
+            <b>felipe araya & nicolás carrasco</b> <i>machallí</i> | 
+            <a onclick="openPopup([
+                {platform: 'Spotify', url: 'https://spotify.com/album/machalli'},
+                {platform: 'Bandcamp', url: 'https://bandcamp.com/album/machalli'},
+                {platform: 'Apple Music', url: 'https://apple.com/music/album/machalli'}
+            ])">digital</a> | cassette
+        </p>
+        <p>
+            <b>halita</b> <i>quiste</i> | trabajo escrito
+        </p>
+        <p>
+            <b>halita</b> <i>invierno 2022</i> | cassette
+        </p>
+        <p>
+            <b>v/a</b> <i>por siempre</i> | 
+            <a onclick="openPopup([
+                {platform: 'Spotify', url: 'https://spotify.com/album/por-siempre'},
+                {platform: 'Bandcamp', url: 'https://bandcamp.com/album/por-siempre'},
+                {platform: 'Apple Music', url: 'https://apple.com/music/album/por-siempre'}
+            ])">digital</a> & fanzine
+        </p>
+        <p>
+            <b>última inocencia</b> <i>última inocencia</i> | 
+            <a onclick="openPopup([
+                {platform: 'Spotify', url: 'https://spotify.com/album/ultima-inocencia'},
+                {platform: 'Bandcamp', url: 'https://bandcamp.com/album/ultima-inocencia'},
+                {platform: 'Apple Music', url: 'https://apple.com/music/album/ultima-inocencia'}
+            ])">digital</a>
+        </p>
+        <p>
+            <b>lluvia morada</b> <i>yukiko's death scene</i> | 
+            <a onclick="openPopup([
+                {platform: 'Spotify', url: 'https://spotify.com/album/yukiko-death-scene'},
+                {platform: 'Bandcamp', url: 'https://bandcamp.com/album/yukiko-death-scene'},
+                {platform: 'Apple Music', url: 'https://apple.com/music/album/yukiko-death-scene'}
+            ])">digital</a> | cassette
+        </p>
+         <p>
+            <b>v/a</b> <i>una elegía, una pantalla, y un rezo interminable con tu nombre</i> | 
+            <a onclick="openPopup([
+                {platform: 'Spotify', url: 'https://spotify.com/album/yukiko-death-scene'},
+                {platform: 'Bandcamp', url: 'https://bandcamp.com/album/yukiko-death-scene'},
+                {platform: 'Apple Music', url: 'https://apple.com/music/album/yukiko-death-scene'}
+            ])">digital</a> | cassette
+        </p>
+         <p>
+            <b>parc fermé</b> <i>métodos</i> | 
+            <a onclick="openPopup([
+                {platform: 'Spotify', url: 'https://spotify.com/album/yukiko-death-scene'},
+                {platform: 'Bandcamp', url: 'https://bandcamp.com/album/yukiko-death-scene'},
+                {platform: 'Apple Music', url: 'https://apple.com/music/album/yukiko-death-scene'}
+            ])">digital</a>
+        </p>
+         <p>
+            <b>parc fermé</b> <i>corazones artificiales</i> | 
+            <a onclick="openPopup([
+                {platform: 'Spotify', url: 'https://spotify.com/album/yukiko-death-scene'},
+                {platform: 'Bandcamp', url: 'https://bandcamp.com/album/yukiko-death-scene'},
+                {platform: 'Apple Music', url: 'https://apple.com/music/album/yukiko-death-scene'}
+            ])">digital</a>
+        </p>
+         <p>
+            <b>falso documental</b> <i>puedes cambiar de todas las formas, y aún serás el mismo</i> | 
+            <a onclick="openPopup([
+                {platform: 'Spotify', url: 'https://spotify.com/album/yukiko-death-scene'},
+                {platform: 'Bandcamp', url: 'https://bandcamp.com/album/yukiko-death-scene'},
+                {platform: 'Apple Music', url: 'https://apple.com/music/album/yukiko-death-scene'}
+            ])">digital</a> | cassette
+        </p>
+         <p>
+            <b>goramen égigo</b> <i>el país que no existe</i> | 
+            <a onclick="openPopup([
+                {platform: 'Spotify', url: 'https://spotify.com/album/yukiko-death-scene'},
+                {platform: 'Bandcamp', url: 'https://bandcamp.com/album/yukiko-death-scene'},
+                {platform: 'Apple Music', url: 'https://apple.com/music/album/yukiko-death-scene'}
+            ])">digital</a> | cassette
+        </p>
+         <p>
+            <b>emilia</b> <i>negación, reconocimiento</i> | 
+            <a onclick="openPopup([
+                {platform: 'Spotify', url: 'https://spotify.com/album/yukiko-death-scene'},
+                {platform: 'Bandcamp', url: 'https://bandcamp.com/album/yukiko-death-scene'},
+                {platform: 'Apple Music', url: 'https://apple.com/music/album/yukiko-death-scene'}
+            ])">digital</a> | cassette
+        </p>
+         <p>
+            <b>flügel kúm</b> <i>no somos irrompibles</i> | 
+            <a onclick="openPopup([
+                {platform: 'Spotify', url: 'https://spotify.com/album/yukiko-death-scene'},
+                {platform: 'Bandcamp', url: 'https://bandcamp.com/album/yukiko-death-scene'},
+                {platform: 'Apple Music', url: 'https://apple.com/music/album/yukiko-death-scene'}
+            ])">digital</a> | cassette
+        </p>
+         <p>
+            <b>mil grullas</b> <i>inhumar, soterrar</i> | 
+            <a onclick="openPopup([
+                {platform: 'Spotify', url: 'https://spotify.com/album/yukiko-death-scene'},
+                {platform: 'Bandcamp', url: 'https://bandcamp.com/album/yukiko-death-scene'},
+                {platform: 'Apple Music', url: 'https://apple.com/music/album/yukiko-death-scene'}
+            ])">digital</a> | cassette
+        </p>
+         <p>
+            <b>winétt</b> <i>persona</i> | 
+            <a onclick="openPopup([
+                {platform: 'Spotify', url: 'https://spotify.com/album/yukiko-death-scene'},
+                {platform: 'Bandcamp', url: 'https://bandcamp.com/album/yukiko-death-scene'},
+                {platform: 'Apple Music', url: 'https://apple.com/music/album/yukiko-death-scene'}
+            ])">digital</a> | cassette
+         </p>
+ <p>
+            <b>winétt & mil grullas</b> <i>aglomeración</i> | 
+            <a onclick="openPopup([
+                {platform: 'Spotify', url: 'https://spotify.com/album/yukiko-death-scene'},
+                {platform: 'Bandcamp', url: 'https://bandcamp.com/album/yukiko-death-scene'},
+                {platform: 'Apple Music', url: 'https://apple.com/music/album/yukiko-death-scene'}
+            ])">digital</a> | cassette
+        </p>
+
+
+
+
+
     </div>
-
-    <!-- Modal para más información -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h3>Más información sobre el formato: <span id="modalTitle">digital</span></h3>
-            <p>Escribe aquí más detalles sobre el formato, como la calidad, la edición, el enlace de descarga, o cualquier otra información relevante.</p>
-            <textarea rows="4" cols="50" placeholder="Añadir más detalles..."></textarea>
-        </div>
-    </div>
-
-    <script>
-        function openModal(format) {
-            // Mostrar el modal y establecer el título dinámico del formato
-            document.getElementById('myModal').style.display = "block";
-            document.getElementById('modalTitle').innerText = format;
-        }
-
-        function closeModal() {
-            // Cerrar el modal
-            document.getElementById('myModal').style.display = "none";
-        }
-
-        // Cerrar modal cuando el usuario hace clic fuera del contenido
-        window.onclick = function(event) {
-            if (event.target == document.getElementById('myModal')) {
-                closeModal();
-            }
-        }
-    </script>
 </body>
 </html>
