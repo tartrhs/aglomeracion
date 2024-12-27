@@ -19,8 +19,8 @@
 
         .photo-container img {
             width: 100%; /* Las imágenes llenan el ancho de la pantalla */
-            max-width: 800px; /* Para no exceder demasiado en pantallas grandes */
-            margin: 10px 0;
+            margin: 0; /* Sin margen entre imágenes */
+            display: block; /* Asegura que las imágenes se comporten como bloques para el ancho del 100% */
         }
     </style>
 </head>
@@ -95,8 +95,8 @@
             '2024-12-11_21-34-31_UTC_5.jpg'
         ];
 
-        // Ordenar las fotos alfabéticamente
-        photoList.sort();
+        // Ordenar las fotos alfabéticamente en orden inverso
+        photoList.sort().reverse();
 
         // Seleccionar el contenedor de fotos
         const container = document.getElementById('photo-container');
