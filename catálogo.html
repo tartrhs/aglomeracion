@@ -114,4 +114,28 @@
             <span class="close" onclick="closeModal()">&times;</span>
             <h3>Más información sobre el formato: <span id="modalTitle">digital</span></h3>
             <p>Escribe aquí más detalles sobre el formato, como la calidad, la edición, el enlace de descarga, o cualquier otra información relevante.</p>
-            <textarea rows="4" cols="50" placeholder="Añadir más detalles..."></
+            <textarea rows="4" cols="50" placeholder="Añadir más detalles..."></textarea>
+        </div>
+    </div>
+
+    <script>
+        function openModal(format) {
+            // Mostrar el modal y establecer el título dinámico del formato
+            document.getElementById('myModal').style.display = "block";
+            document.getElementById('modalTitle').innerText = format;
+        }
+
+        function closeModal() {
+            // Cerrar el modal
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        // Cerrar modal cuando el usuario hace clic fuera del contenido
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('myModal')) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
