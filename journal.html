@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .photo-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .photo-container img {
+            width: 100%; /* Las imágenes llenan el ancho de la pantalla */
+            max-width: 800px; /* Para no exceder demasiado en pantallas grandes */
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Journal</h1>
+    <div class="photo-container" id="photo-container">
+        <!-- Aquí se insertarán las fotos -->
+    </div>
+
+    <script>
+        // RUTA a la carpeta con las fotos
+        const photoFolder = 'aglomeracion/fotos/'; 
+
+        // Array con los nombres de las fotos (añade aquí los nombres exactos)
+        const photoList = [
+            const photoList = [
+    '2023-03-14_23-54-42_UTC_1.jpg',
+    '2023-03-14_23-54-42_UTC_2.jpg',
+    '2023-03-14_23-54-42_UTC_3.jpg',
+    '2023-03-14_23-54-42_UTC_4.jpg',
+    '2023-03-14_23-54-42_UTC_5.jpg',
+    '2023-03-14_23-54-42_UTC_6.jpg',
+    '2023-03-14_23-54-42_UTC_7.jpg',
+    '2023-03-14_23-56-08_UTC_1.jpg',
+    '2023-03-14_23-56-08_UTC_2.jpg',
+    '2023-03-14_23-56-08_UTC_3.jpg',
+    '2023-03-14_23-56-08_UTC_4.jpg',
+    '2023-03-14_23-56-08_UTC_5.jpg',
+    '2023-03-14_23-56-08_UTC_6.jpg',
+    '2023-03-14_23-56-08_UTC_7.jpg',
+    '2023-03-14_23-56-08_UTC_8.jpg',
+    '2023-08-02_14-25-49_UTC_1.jpg',
+    '2023-11-11_18-40-49_UTC.jpg',
+    '2024-01-10_17-08-41_UTC.jpg',
+    '2024-01-22_18-17-02_UTC_1.jpg',
+    '2024-01-22_18-17-02_UTC_2.jpg',
+    '2024-01-22_18-17-02_UTC_3.jpg',
+    '2024-02-05_16-17-54_UTC_1.jpg',
+    '2024-02-05_16-17-54_UTC_2.jpg',
+    '2024-02-26_21-46-02_UTC.jpg',
+    '2024-04-03_21-42-07_UTC.jpg',
+    '2024-04-29_00-15-31_UTC_1.jpg',
+    '2024-04-29_00-15-31_UTC_2.jpg',
+    '2024-05-07_18-31-13_UTC.jpg',
+    '2024-05-20_01-36-10_UTC_1.jpg',
+    '2024-05-20_01-36-10_UTC_10.jpg',
+    '2024-05-20_01-36-10_UTC_2.jpg',
+    '2024-05-20_01-36-10_UTC_3.jpg',
+    '2024-05-20_01-36-10_UTC_4.jpg',
+    '2024-05-20_01-36-10_UTC_5.jpg',
+    '2024-05-20_01-36-10_UTC_6.jpg',
+    '2024-05-20_01-36-10_UTC_7.jpg',
+    '2024-05-20_01-36-10_UTC_8.jpg',
+    '2024-05-20_01-36-10_UTC_9.jpg',
+    '2024-05-31_19-18-38_UTC_1.jpg',
+    '2024-05-31_19-18-38_UTC_2.jpg',
+    '2024-05-31_19-18-38_UTC_3.jpg',
+    '2024-05-31_19-18-38_UTC_4.jpg',
+    '2024-10-10_14-44-20_UTC_2.jpg',
+    '2024-10-10_14-44-20_UTC_3.jpg',
+    '2024-10-10_14-44-20_UTC_4.jpg',
+    '2024-11-05_21-56-12_UTC.jpg',
+    '2024-12-02_18-39-56_UTC_1.jpg',
+    '2024-12-02_18-39-56_UTC_2.jpg',
+    '2024-12-02_18-39-56_UTC_3.jpg',
+    '2024-12-02_18-39-56_UTC_4.jpg',
+    '2024-12-09_14-47-53_UTC.jpg',
+    '2024-12-10_16-32-46_UTC.jpg',
+    '2024-12-11_21-34-31_UTC_1.jpg',
+    '2024-12-11_21-34-31_UTC_2.jpg',
+    '2024-12-11_21-34-31_UTC_3.jpg',
+    '2024-12-11_21-34-31_UTC_4.jpg',
+    '2024-12-11_21-34-31_UTC_5.jpg'
+];
+
+          
+
+        // Ordenar fotos alfabéticamente
+        photoList.sort();
+
+        // Seleccionar el contenedor de fotos
+        const container = document.getElementById('photo-container');
+
+        // Crear elementos para cada foto
+        photoList.forEach(photo => {
+            const img = document.createElement('img');
+            img.src = photoFolder + photo; // Ruta completa
+            img.alt = photo;
+            container.appendChild(img); // Agregar imagen al contenedor
+        });
+    </script>
+</body>
+</html>
 
