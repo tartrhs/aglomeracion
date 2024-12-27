@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><b>catálogo<b></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 10pt;
+        }
+        b {
+            font-weight: bold;
+        }
+        i {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p><b>sin aspavientos & trío hogar</b> <i>sin aspavientos & trío hogar</i> | digital | cassette</p>
+        <p><b>falso documental</b> <i>ausencia</i> | digital</p>
+        <p><b>trío hogar</b> <i>trío hogar en vivo 2024</i> | digital</p>
+        <p><b>aria</b> <i>aria en vivo 2023</i> | digital</p>
+        <p><b>felipe araya & nicolás carrasco</b> <i>machallí</i> | digital | cassette</p>
+        <p><b>falso documental</b> <i>demos, etc</i> | digital | cassette</p>
+        <p><b>segunda mordida</b> <i>segunda mordida en vivo 2022</i> | digital</p>
+        <p><b>flügel kúm</b> <i>demos, etc</i> | digital</p>
+        <p><b>winétt</b> <i>7 copas</i> | digital</p>
+        <p><b>mube</b> <i>eyuh</i> | digital | cassette</p>
+        <p><b>alfonso carrera</b> <i>declamación poética y arreglo musical, sqvatqhcp, chillán 22/12/22</i> | digital | cassette</p>
+        <p><b>aria</b> <i>teofilia</i> | digital | cassette</p>
+        <p><b>halita</b> <i>quiste</i> | trabajo escrito</p>
+        <p><b>halita</b> <i>invierno 2022</i> | cassette</p>
+        <p><b>v/a</b> <i>por siempre</i> | digital & fanzine</p>
+        <p><b>r.r.o.o, falso documental</b> <i>si pudiera</i> | digital | cassette</p>
+        <p><b>benjamín alberto</b> <i>ruidos de la construcción y recuerdos de la niñez</i> | digital | cassette</p>
+        <p><b>aerodynamo</b> <i>iris</i> | digital | cassette</p>
+        <p><b>winétt</b> <i>llámame</i> | digital | cassette</p>
+        <p><b>ígora</b> <i>cenotafio</i> | digital | cassette</p>
+        <p><b>televidencia</b> <i>canal infinito</i> | digital | cassette</p>
+        <p><b>v/a</b> <i>en esta ciudad no llueve, nadie llora</i> | digital | cassette & fanzine</p>
+        <p><b>r.r.o.o</b> <i>proyecto inmobiliario</i> | digital | cassette</p>
+        <p><b>ígora</b> <i>seizure</i> | digital | cassette</p>
+        <p><b>vilaret</b> <i>efigies</i> | digital | cassette</p>
+        <p><b>ígora</b> <i>orgánula cetus</i> | digital</p>
+        <p><b>emilia</b> <i>coronas de laurel</i> | digital | cassette</p>
+        <p><b>vilaret</b> <i>tres veces té</i> | digital | cassette</p>
+        <p><b>josé tagle</b> <i>entre tus brazos</i> | digital | cassette</p>
+        <p><b>infantis</b> <i>cariño</i> | digital | cassette</p>
+        <p><b>v/a</b> <i>ira vol. 2</i> | digital | cassette</p>
+        <p><b>v/a</b> <i>ira vol. 1</i> | digital | cassette</p>
+        <p><b>última inocencia</b> <i>última inocencia</i> | digital</p>
+        <p><b>lluvia morada</b> <i>yukiko's death scene</i> | digital | cassette</p>
+        <p><b>v/a</b> <i>una elegía, una pantalla, y un rezo interminable con tu nombre</i> | digital | cassette</p>
+        <p><b>parc fermé</b> <i>métodos</i> | digital</p>
+        <p><b>parc fermé</b> <i>corazones artificiales</i> | digital</p>
+        <p><b>falso documental</b> <i>puedes cambiar de todas las formas, y aún serás el mismo</i> | digital | cassette</p>
+        <p><b>goramen égigo</b> <i>el país que no existe</i> | digital | cassette</p>
+        <p><b>emilia</b> <i>negación, reconocimiento</i> | digital | cassette</p>
+        <p><b>flügel kúm</b> <i>no somos irrompibles</i> | digital | cassette</p>
+        <p><b>mil grullas</b> <i>inhumar/soterrar</i> | digital | cassette</p>
+        <p><b>winétt</b> <i>persona</i> | digital | cassette</p>
+        <p><b>winétt & mil grullas</b> <i>agglomeración</i> | digital | cassette</p>
+    </div>
+</body>
+</html>
