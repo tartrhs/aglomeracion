@@ -9,6 +9,7 @@
         body {
             font-family: Arial, sans-serif;
             font-size: 10pt;
+            text-align: center; /* Centra el texto en todo el cuerpo */
         }
         a {
             font-weight: bold;
@@ -20,20 +21,17 @@
         }
         img {
             width: 50px; /* Ajusta el tamaño de la imagen */
-            float: left;
-            margin-right: 20px; /* Espacio entre la imagen y el texto */
-            margin-bottom: 10px; /* Espacio debajo de la imagen */
+            margin: 0 auto; /* Centra la imagen */
+            display: block; /* Necesario para que el margen automático funcione */
         }
         .contenido {
-            overflow: hidden; /* Limpia el float */
             margin-bottom: 20px;
         }
         /* Opcional: espacio después de las imágenes si es necesario */
         .texto-contenedor {
-            clear: both; /* Evita que otros elementos floten alrededor */
             margin-top: 10px; /* Espacio adicional si es necesario */
         }
-        /* Clase para el email, ahora alineado a la derecha */
+        /* Clase para el email, alineado a la derecha */
         .email {
             text-align: right; /* Alinea el texto a la derecha */
             font-style: italic; /* Hace que el texto esté en cursivas */
@@ -50,10 +48,10 @@
             <p>since 2018</p>
         </div>
         <div>
-           
+            
             <p><a href="catálogo.html">catálogo</a></p>
             <p><a href="en vivo.html">en vivo</a></p>
-             <p><a href="enlaces.html">enlaces</a></p>
+            <p><a href="enlaces.html">enlaces</a></p>
             <p><a href="etc.html">etc</a></p>
             <p class="email">hola@aglomeracion.org</p> <!-- Aplicando la clase aquí -->
         </div>
