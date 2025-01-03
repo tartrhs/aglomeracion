@@ -1,6 +1,6 @@
 
+      
 
- 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,8 +43,8 @@
     <div class="photo-container">
         <!-- Fotos iniciales en par -->
         <div class="photo-pair">
-            <img src="fotos/foto1.jpg" alt="Foto 1">
-            <img src="fotos/foto2.jpg" alt="Foto 2">
+            <img src="WhatsApp Image 2024-12-25 at 15.50.35">
+            <img src="WhatsApp Image 2024-12-25 at 14.14.47">
         </div>
         <!-- Resto de las fotos individualmente -->
         <div id="photo-container"></div>
@@ -56,6 +56,7 @@
 
         // Array con el resto de los nombres de las fotos
         const photoList = [
+          
                       '2023-03-14_23-54-42_UTC_1.jpg',
             '2023-03-14_23-54-42_UTC_2.jpg',
             '2023-03-14_23-54-42_UTC_3.jpg',
@@ -115,8 +116,8 @@
             '2024-12-11_21-34-31_UTC_5.jpg'
         ];
 
-        // Ordenar alfabéticamente el array de fotos
-        photoList.sort();
+        // Ordenar alfabéticamente en orden inverso
+        photoList.sort().reverse();
 
         // Seleccionar el contenedor de fotos
         const container = document.getElementById('photo-container');
@@ -132,4 +133,3 @@
     </script>
 </body>
 </html>
-
