@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>archivo</title>
+    <title>Archivo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,25 +17,41 @@
             justify-content: center;
         }
 
-        .photo-container img {
-            width: 100%; /* Las imágenes llenan el ancho de la pantalla */
-            margin: 0; /* Sin margen entre imágenes */
-            display: block; /* Asegura que las imágenes se comporten como bloques para el ancho del 100% */
+        .photo-pair {
+            display: flex;
+            width: 100%; /* Ambas fotos juntas ocupan el ancho total */
+        }
+
+        .photo-pair img {
+            width: 50%; /* Cada foto ocupa la mitad del ancho */
+            margin: 0;
+            display: block;
+        }
+
+        .photo-container img.single {
+            width: 100%; /* Fotos individuales ocupan todo el ancho */
+            display: block;
         }
     </style>
 </head>
 <body>
-    <h1 style="text-align: center;"> </h1>
-    <div class="photo-container" id="photo-container">
-        <!-- Aquí se insertarán las fotos -->
+    <h1 style="text-align: center;">Galería de Fotos</h1>
+    <div class="photo-container">
+        <!-- Fotos iniciales en par -->
+        <div class="photo-pair">
+            <img src="WhatsApp Image 2024-12-25 at 15.50.35.jpeg">
+            <img src="WhatsApp Image 2024-12-25 at 14.14.47.jpeg">
+        </div>
+        <!-- Resto de las fotos individualmente -->
+        <div id="photo-container"></div>
     </div>
 
     <script>
         // Ruta a la carpeta con las fotos
         const photoFolder = 'fotos/'; 
 
-        // Array con los nombres de las fotos
-        const photoList = [
+        // Array con el resto de los nombres de las fotos
+       const photoList = [
             '2023-03-14_23-54-42_UTC_1.jpg',
             '2023-03-14_23-54-42_UTC_2.jpg',
             '2023-03-14_23-54-42_UTC_3.jpg',
@@ -95,9 +111,6 @@
             '2024-12-11_21-34-31_UTC_5.jpg'
         ];
 
-        // Ordenar las fotos alfabéticamente en orden inverso
-        photoList.sort().reverse();
-
         // Seleccionar el contenedor de fotos
         const container = document.getElementById('photo-container');
 
@@ -106,6 +119,7 @@
             const img = document.createElement('img');
             img.src = photoFolder + photo; // Ruta completa de cada foto
             img.alt = photo; // Texto alternativo
+            img.classList.add('single'); // Clase para estilos individuales
             container.appendChild(img); // Agregar la imagen al contenedor
         });
     </script>
