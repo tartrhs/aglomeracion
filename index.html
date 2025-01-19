@@ -6,102 +6,122 @@
     <title>aglomeración</title>
     <link rel="icon" href="2227be0a48aaac4666974b2f3290fabad68640b5r1-600-400v2_128.jpg" type="image/x-icon">
     <style>
+        @font-face {
+            font-family: 'Edwardian';
+            src: url('https://raw.githubusercontent.com/tartrhs/aglomeracion/main/Edwardian.ttf') format('truetype');
+            font-style: normal;
+            font-weight: normal;
+        }
+
         body {
             font-family: Arial, sans-serif;
             font-size: 10pt;
             text-align: center;
         }
+
         a {
             font-weight: bold;
             color: black;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
-        /* Estilo para la imagen pequeña en la parte superior */
+
+        /* Estilo para el texto con Edwardian */
+        .edwardian {
+            font-family: 'Edwardian', Arial, sans-serif; /* Fuente personalizada */
+            font-size: 20pt;
+        }
+
+        /* Resto de estilos existentes */
         .logo-imagen {
-            width: 50px;  /* Mantén el tamaño original */
+            width: 50px;
             margin: 0 auto;
             display: block;
         }
-        /* Estilo para la imagen que aparece al final */
+
         img {
-            width: 50%;  /* Ajustamos el tamaño de la imagen para que ocupe el centro de la página */
-            max-width: 600px; /* Establecemos un tamaño máximo para la imagen */
-            height: auto; /* Mantenemos la proporción original */
-            margin: 20px auto;  /* Centramos la imagen y damos un poco de espacio superior e inferior */
+            width: 50%;
+            max-width: 600px;
+            height: auto;
+            margin: 20px auto;
             display: block;
         }
+
         .contenido {
             margin-bottom: 20px;
         }
+
         .texto-contenedor {
             margin-top: 10px;
         }
+
         .email, .derecha {
-            text-align: right; /* Alinea el texto a la derecha */
+            text-align: right;
             margin: 0;
         }
+
         .email {
-            font-style: italic; /* Hace que el texto esté en cursiva */
+            font-style: italic;
         }
+
         .enlaces {
             text-align: left;
             margin: 0;
             padding-left: 20px;
         }
+
         .enlaces a {
-            display: inline-block; /* Cada enlace estará en su propia línea */
-            margin: 0; /* Elimina el margen */
-            padding: 2px 0; /* Espaciado vertical mínimo entre los enlaces */
+            display: inline-block;
+            margin: 0;
+            padding: 2px 0;
         }
+
         .texto-final {
             margin-top: 20px;
             font-size: 12pt;
             font-style: italic;
             text-align: justify;
         }
+
         .texto-final-enlace {
-            font-family: 'Times New Roman', Times, serif; /* Fuente Times New Roman */
-            font-size: 20px; /* Tamaño de fuente */
-            color: red; /* Color rojo */
-            text-align: center; /* Asegura que se mantenga centrado */
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            color: red;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="contenido">
-        <!-- Imagen pequeña en la parte superior -->
         <img class="logo-imagen" src="0036394745_20.jpg" alt="">
- 
+
         <div class="texto-contenedor">
-            <p>música</p> 
-            <p>(early xxi century music)</p>
+            
+            <p class="edwardian">Early XXI Century Music</p> <!-- Texto con Edwardian -->
             <p>since 2018</p>
         </div>
         <div class="enlaces">
             <a href="catálogo.html">catálogo</a>
-            <br> <!-- Salto de línea explícito -->
+            <br>
             <a href="en vivo.html">en vivo</a>
             <br>
             <a href="enlaces.html">enlaces</a>
             <br>
             <a href="etc.html">etc</a>
         </div>
-        <p class="derecha"><a href="journal.html">diario/archivo</a></p> <!-- Clase derecha -->
+        <p class="derecha"><a href="journal.html">diario/archivo</a></p>
         <p class="email">hola@aglomeracion.org</p>
     </div>
 
-    <!-- Imagen centrada al final -->
     <img src="a0499433235_10.jpg" alt="Imagen final">
 
-    <!-- Texto al final -->
-    <p class="texto-final">Un espectro recorre este fonograma digital y magnético: el espectro de Chile. Que tal fantasma y fantasía sea puro desfallecimiento, no implica que Aglomeración no se sienta inmensamente complacido de ofrecerlo a su público auditor. Tampoco es la tarea de este texto promocional tirar factos o plantear una actitud chill de cojones frente a la forma y contenido del fonograma: Aglomeración descarta completamente una apelación juvenil a su público. 
+    <p class="texto-final">
+        Un espectro recorre este fonograma digital y magnético: el espectro de Chile...
+    </p>
 
-sin aspavientos y Trío Hogar decidieron realizar una publicación conjunta; luego de despejar la posibilidad de trabajar juntos —metodologías incompatibles— zanjaron que cada lado de 30 minutos de la cinta magnética fuera ocupado por su trabajo. El único punto en común es que la tarea técnico-fonográfica estaría a cargo de Fedor Cambiazo. Nada hacía presagiar que, a pesar de la labor separada, lo obrado se acerca a “lo mismo”. Ese “lo mismo” es el espectro de Chile (“Chile” no puede ser otra cosa que un espectro), la “escenografía musical vigente” (te lo dice Trío Hogar en su publicación en vivo 2024), “el sentido nacionalista en la música chilena” delirado por Roberto Escobar en 1961, los “fragmentos reverberados y no reverberados” utilizados para audio (partitura de B. Vásquez, 2024, realizada por sin aspavientos simultáneamente con la ejecución de sin título #11, 2013-19, de N. Carrasco), los perros que ladran ocasionalmente, las veredas que son regadas de tarde en tarde, las cuerdas tañidas con violencia, lo que el pueblo sabe sobre los ruidos en chileno. </p>
-
-    <!-- Enlace al final -->
     <p class="texto-final-enlace">
         <a href="https://aglomeracion.bandcamp.com/album/sin-aspavientos-tr-o-hogar">https://aglomeracion.bandcamp.com/album/sin-aspavientos-tr-o-hogar</a>
     </p>
