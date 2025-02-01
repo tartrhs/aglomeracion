@@ -69,13 +69,28 @@
         </p>
 
         <p class="texto-final-enlace">
-            <a href="https://aglomeracion.bandcamp.com/album/sin-aspavientos-tr-o-hogar">https://aglomeracion.bandcamp.com/album/sin-aspavientos-tr-o-hogar</a>
+            <a href="https://aglomeracion.bandcamp.com/album/sin-aspavientos-tr-o-hogar" id="enlace-justificado">https://aglomeracion.bandcamp.com/album/sin-aspavientos-tr-o-hogar</a>
         </p>
         <!-- Resto de las fotos individualmente -->
         <div id="photo-container"></div>
     </div>
 
     <script>
+        // Función para justificar el texto del enlace
+        function justificarEnlace() {
+            const enlace = document.getElementById('enlace-justificado');
+            const texto = enlace.textContent;
+            const palabras = texto.split(' ');
+            const espacioExtra = ' '; // Espacio estrecho (puedes usar un espacio normal si prefieres)
+
+            // Agrega espacios adicionales entre las palabras
+            const textoJustificado = palabras.join(espacioExtra.repeat(2)); // Ajusta el número de espacios según sea necesario
+            enlace.textContent = textoJustificado;
+        }
+
+        // Llama a la función para justificar el enlace
+        justificarEnlace();
+
         // Ruta a la carpeta con las fotos
         const photoFolder = 'fotos/'; 
 
