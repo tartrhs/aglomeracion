@@ -54,6 +54,9 @@
             text-decoration: none; /* Opcional: elimina el subrayado del enlace */
             color: inherit; /* Hereda el color del texto */
             white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+            grid-column: 1 / -1; /* Ocupa todas las columnas del grid */
+            display: flex;
+            justify-content: space-between; /* Distribuye el espacio entre las letras */
         }
     </style>
 </head>
@@ -83,7 +86,7 @@
     <script>
         // Función para dividir el texto del enlace en letras y justificarlo
         function justificarEnlace() {
-            const enlace = document.getElementById('enlace-justificado');
+            const enlace = document.getElementById('enlace-justificado').querySelector('a');
             const texto = enlace.textContent.trim();
             const letras = texto.split('');
 
