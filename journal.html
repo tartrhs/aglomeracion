@@ -44,15 +44,16 @@
             font-family: 'Times New Roman', Times, serif;
             font-size: 35px;
             color: red;
-            text-align: justify; /* Justifica el texto */
-            text-align-last: justify; /* Justifica la última línea (o la única línea) */
             width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(10px, 1fr)); /* Distribuye las letras */
+            gap: 2px; /* Espacio entre letras */
         }
 
         .texto-final-enlace a {
             text-decoration: none; /* Opcional: elimina el subrayado del enlace */
             color: inherit; /* Hereda el color del texto */
-            display: block; /* Hace que el enlace ocupe todo el ancho del contenedor */
+            white-space: nowrap; /* Evita que el texto se divida en varias líneas */
         }
     </style>
 </head>
@@ -71,8 +72,8 @@
         </p>
 
         <!-- Enlace justificado -->
-        <p class="texto-final-enlace">
-            <a href="https://aglomeracion.bandcamp.com/album/sin-aspavientos-tr-o-hogar" id="enlace-justificado">https://aglomeracion.bandcamp.com/album/sin-aspavientos-tr-o-hogar</a>
+        <p class="texto-final-enlace" id="enlace-justificado">
+            <a href="https://aglomeracion.bandcamp.com/album/sin-aspavientos-tr-o-hogar">https://aglomeracion.bandcamp.com/album/sin-aspavientos-tr-o-hogar</a>
         </p>
 
         <!-- Resto de las fotos individualmente -->
@@ -80,16 +81,21 @@
     </div>
 
     <script>
-        // Función para justificar el texto del enlace
+        // Función para dividir el texto del enlace en letras y justificarlo
         function justificarEnlace() {
             const enlace = document.getElementById('enlace-justificado');
-            const texto = enlace.textContent;
-            const palabras = texto.split(' ');
-            const espacioExtra = ' '; // Espacio estrecho (puedes usar un espacio normal si prefieres)
+            const texto = enlace.textContent.trim();
+            const letras = texto.split('');
 
-            // Agrega espacios adicionales entre las palabras
-            const textoJustificado = palabras.join(espacioExtra.repeat(2)); // Ajusta el número de espacios según sea necesario
-            enlace.textContent = textoJustificado;
+            // Limpia el contenido del enlace
+            enlace.innerHTML = '';
+
+            // Agrega cada letra como un span
+            letras.forEach((letra) => {
+                const span = document.createElement('span');
+                span.textContent = letra;
+                enlace.appendChild(span);
+            });
         }
 
         // Llama a la función para justificar el enlace
