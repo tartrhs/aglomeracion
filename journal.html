@@ -11,7 +11,7 @@
             padding: 0;
         }
 
-        .photo-container {
+        .photo-container, .nuevas-fotos {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -28,7 +28,7 @@
             display: block;
         }
 
-        .photo-container img.single {
+        .photo-container img.single, .nuevas-fotos img.single {
             width: 100%; /* Fotos individuales ocupan todo el ancho */
             display: block;
         }
@@ -62,26 +62,27 @@
 </head>
 <body>
     
-    <div class="photo-container">
-        <!-- Fotos iniciales en par -->
-        <div class="photo-pair">
-            <img src="WhatsApp Image 2024-12-25 at 15.50.35.jpeg">
-            <img src="WhatsApp Image 2024-12-25 at 14.14.47.jpeg">
-        </div>
+    <!-- Nuevas fotos -->
+    <div class="nuevas-fotos" id="nuevas-fotos"></div>
 
-        <!-- Texto final -->
-        <p class="texto-final">
-            Un espectro recorre este fonograma digital y magnético: el espectro de Chile. Que tal fantasma y fantasía sea puro desfallecimiento, no implica que Aglomeración no se sienta inmensamente complacido de ofrecerlo a su público auditor. Tampoco es la tarea de este texto promocional tirar factos o plantear una actitud chill de cojones frente a la forma y contenido del fonograma: Aglomeración descarta completamente una apelación juvenil a su público. sin aspavientos y Trío Hogar decidieron realizar una publicación conjunta; luego de despejar la posibilidad de trabajar juntos —metodologías incompatibles— zanjaron que cada lado de 30 minutos de la cinta magnética fuera ocupado por su trabajo. El único punto en común es que la tarea técnico-fonográfica estaría a cargo de Fedor Cambiazo. Nada hacía presagiar que, a pesar de la labor separada, lo obrado se acerca a “lo mismo”. Ese “lo mismo” es el espectro de Chile (“Chile” no puede ser otra cosa que un espectro), la “escenografía musical vigente” (te lo dice Trío Hogar en su publicación en vivo 2024), “el sentido nacionalista en la música chilena” delirado por Roberto Escobar en 1961, los “fragmentos reverberados y no reverberados” utilizados para audio (partitura de B. Vásquez, 2024, realizada por sin aspavientos simultáneamente con la ejecución de sin título #11, 2013-19, de N. Carrasco), los perros que ladran ocasionalmente, las veredas que son regadas de tarde en tarde, las cuerdas tañidas con violencia, lo que el pueblo sabe sobre los ruidos en chileno. 
-        </p>
-
-        <!-- Enlace justificado -->
-        <p class="texto-final-enlace" id="enlace-justificado">
-            <a href="https://aglomeracion.bandcamp.com/album/sin-aspavientos-tr-o-hogar">https://aglomeracion.bandcamp.com/album/sin-aspavientos-tr-o-hogar</a>
-        </p>
-
-        <!-- Resto de las fotos individualmente -->
-        <div id="photo-container"></div>
+    <!-- Fotos iniciales en par -->
+    <div class="photo-pair">
+        <img src="WhatsApp Image 2024-12-25 at 15.50.35.jpeg">
+        <img src="WhatsApp Image 2024-12-25 at 14.14.47.jpeg">
     </div>
+
+    <!-- Texto final -->
+    <p class="texto-final">
+        Un espectro recorre este fonograma digital y magnético: el espectro de Chile. Que tal fantasma y fantasía sea puro desfallecimiento, no implica que Aglomeración no se sienta inmensamente complacido de ofrecerlo a su público auditor. Tampoco es la tarea de este texto promocional tirar factos o plantear una actitud chill de cojones frente a la forma y contenido del fonograma: Aglomeración descarta completamente una apelación juvenil a su público. sin aspavientos y Trío Hogar decidieron realizar una publicación conjunta; luego de despejar la posibilidad de trabajar juntos —metodologías incompatibles— zanjaron que cada lado de 30 minutos de la cinta magnética fuera ocupado por su trabajo. El único punto en común es que la tarea técnico-fonográfica estaría a cargo de Fedor Cambiazo. Nada hacía presagiar que, a pesar de la labor separada, lo obrado se acerca a “lo mismo”. Ese “lo mismo” es el espectro de Chile (“Chile” no puede ser otra cosa que un espectro), la “escenografía musical vigente” (te lo dice Trío Hogar en su publicación en vivo 2024), “el sentido nacionalista en la música chilena” delirado por Roberto Escobar en 1961, los “fragmentos reverberados y no reverberados” utilizados para audio (partitura de B. Vásquez, 2024, realizada por sin aspavientos simultáneamente con la ejecución de sin título #11, 2013-19, de N. Carrasco), los perros que ladran ocasionalmente, las veredas que son regadas de tarde en tarde, las cuerdas tañidas con violencia, lo que el pueblo sabe sobre los ruidos en chileno. 
+    </p>
+
+    <!-- Enlace justificado -->
+    <p class="texto-final-enlace" id="enlace-justificado">
+        <a href="https://aglomeracion.bandcamp.com/album/sin-aspavientos-tr-o-hogar">https://aglomeracion.bandcamp.com/album/sin-aspavientos-tr-o-hogar</a>
+    </p>
+
+    <!-- Fotos antiguas -->
+    <div class="photo-container" id="photo-container"></div>
 
     <script>
         // Función para dividir el texto del enlace en letras y justificarlo
@@ -107,9 +108,13 @@
         // Ruta a la carpeta con las fotos
         const photoFolder = 'fotos/'; 
 
-        // Array con el resto de los nombres de las fotos
+        // Array con las fotos nuevas
+        const nuevasFotos = [
+            '2025-02-01 a la(s) 07.10.26.png'
+        ];
+
+        // Array con las fotos antiguas
         const photoList = [
-            '2025-02-01 a la(s) 07.10.26.png', // Nueva foto al inicio
             '2023-03-14_23-54-42_UTC_1.jpg',
             '2023-03-14_23-54-42_UTC_2.jpg',
             '2023-03-14_23-54-42_UTC_3.jpg',
@@ -169,21 +174,28 @@
             '2024-12-11_21-34-31_UTC_5.jpg'
         ];
 
-        // Ordenar alfabéticamente en orden inverso
-        photoList.sort().reverse();
+        // Seleccionar el contenedor de nuevas fotos
+        const nuevasFotosContainer = document.getElementById('nuevas-fotos');
 
-        // Seleccionar el contenedor de fotos
+        // Crear elementos para las fotos nuevas y agregarlas al contenedor
+        nuevasFotos.forEach((photo) => {
+            const img = document.createElement('img');
+            img.src = photoFolder + photo; // Ruta completa de cada foto
+            img.alt = photo; // Texto alternativo
+            img.classList.add('single'); // Clase para estilos individuales
+            nuevasFotosContainer.appendChild(img); // Agrega la foto al contenedor de nuevas fotos
+        });
+
+        // Seleccionar el contenedor de fotos antiguas
         const container = document.getElementById('photo-container');
 
-        // Crear elementos para cada foto y agregarlos al inicio del contenedor
+        // Crear elementos para las fotos antiguas y agregarlas al contenedor
         photoList.forEach((photo) => {
             const img = document.createElement('img');
             img.src = photoFolder + photo; // Ruta completa de cada foto
             img.alt = photo; // Texto alternativo
             img.classList.add('single'); // Clase para estilos individuales
-
-            // Agrega la foto al inicio del contenedor
-            container.prepend(img);
+            container.appendChild(img); // Agrega la foto al contenedor de fotos antiguas
         });
     </script>
 </body>
