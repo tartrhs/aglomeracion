@@ -42,7 +42,7 @@
 
         .texto-final-enlace {
             font-family: 'Times New Roman', Times, serif;
-            font-size: 15px;
+            font-size: 35px;
             color: red;
             width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
             display: grid;
@@ -109,7 +109,7 @@
 
         // Array con el resto de los nombres de las fotos
         const photoList = [
-            '2025-02-01 a la(s) 07.10.26.jpg',
+            '2025-02-01 a la(s) 07.10.26.png', // Nueva foto al inicio
             '2023-03-14_23-54-42_UTC_1.jpg',
             '2023-03-14_23-54-42_UTC_2.jpg',
             '2023-03-14_23-54-42_UTC_3.jpg',
@@ -175,13 +175,15 @@
         // Seleccionar el contenedor de fotos
         const container = document.getElementById('photo-container');
 
-        // Crear elementos para cada foto
-        photoList.forEach(photo => {
+        // Crear elementos para cada foto y agregarlos al inicio del contenedor
+        photoList.forEach((photo) => {
             const img = document.createElement('img');
             img.src = photoFolder + photo; // Ruta completa de cada foto
             img.alt = photo; // Texto alternativo
             img.classList.add('single'); // Clase para estilos individuales
-            container.appendChild(img); // Agregar la imagen al contenedor
+
+            // Agrega la foto al inicio del contenedor
+            container.prepend(img);
         });
     </script>
 </body>
