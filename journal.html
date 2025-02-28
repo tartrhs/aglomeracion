@@ -112,26 +112,6 @@
     <div class="photo-container" id="photo-container"></div>
 
     <script>
-        // Función para dividir el texto del enlace en letras y justificarlo
-        function justificarEnlace() {
-            const enlace = document.getElementById('enlace-justificado').querySelector('a');
-            const texto = enlace.textContent.trim();
-            const letras = texto.split('');
-
-            // Limpia el contenido del enlace
-            enlace.innerHTML = '';
-
-            // Agrega cada letra como un span
-            letras.forEach((letra) => {
-                const span = document.createElement('span');
-                span.textContent = letra;
-                enlace.appendChild(span);
-            });
-        }
-
-        // Llama a la función para justificar el enlace
-        justificarEnlace();
-
         // Ruta a la carpeta con las fotos
         const photoFolder = 'fotos/'; 
 
@@ -207,18 +187,6 @@
         // Ordenar alfabéticamente en orden inverso
         photoList.sort().reverse();
         
-        // Seleccionar el contenedor de nuevas fotos
-        const nuevasFotosContainer = document.getElementById('nuevas-fotos');
-
-        // Crear elementos para las fotos nuevas y agregarlas al contenedor
-        nuevasFotos.forEach((photo) => {
-            const img = document.createElement('img');
-            img.src = photoFolder + photo; // Ruta completa de cada foto
-            img.alt = photo; // Texto alternativo
-            img.classList.add('single'); // Clase para estilos individuales
-            nuevasFotosContainer.appendChild(img); // Agrega la foto al contenedor de nuevas fotos
-        });
-
         // Seleccionar el contenedor de fotos antiguas
         const container = document.getElementById('photo-container');
 
