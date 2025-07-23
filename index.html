@@ -19,7 +19,7 @@
 
     body {
       font-family: Arial, sans-serif;
-      font-size: 14px;
+      font-size: 13px;
       margin: 0;
       padding: 0;
       text-align: center;
@@ -30,12 +30,14 @@
       font-weight: bold;
       color: black;
       text-decoration: none;
+      transition: color 0.2s ease-in-out;
     }
 
     a:hover,
     a:focus {
+      color: #002fa7; /* Azul ultramar tipo Klein */
       text-decoration: underline;
-      outline: 1px dashed gray;
+      outline: none; /* Quitar borde punteado */
     }
 
     .edwardian {
@@ -92,10 +94,10 @@
       margin-top: 30px;
     }
 
-    /* MEDIA QUERIES PARA PANTALLAS PEQUEÑAS */
+    /* MEDIA QUERIES */
     @media (max-width: 768px) {
       body {
-        font-size: 13px;
+        font-size: 12px;
       }
 
       .edwardian {
@@ -125,7 +127,7 @@
 
     @media (max-width: 480px) {
       body {
-        font-size: 12.5px;
+        font-size: 11.5px;
       }
 
       .edwardian {
