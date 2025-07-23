@@ -1,122 +1,177 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aglomeración</title>
-    <link rel="icon" href="2227be0a48aaac4666974b2f3290fabad68640b5r1-600-400v2_128.jpg" type="image/x-icon">
-    <style>
-        @font-face {
-            font-family: 'Edwardian';
-            src: url('https://raw.githubusercontent.com/tartrhs/aglomeracion/main/Edwardian.ttf') format('truetype');
-            font-style: normal;
-            font-weight: normal;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aglomeración</title>
+  <link rel="icon" href="2227be0a48aaac4666974b2f3290fabad68640b5r1-600-400v2_128.jpg" type="image/x-icon" />
+  <style>
+    @font-face {
+      font-family: 'Edwardian';
+      src: url('https://raw.githubusercontent.com/tartrhs/aglomeracion/main/Edwardian.ttf') format('truetype');
+      font-style: normal;
+      font-weight: normal;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            font-size: 10pt;
-            text-align: center;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        a {
-            font-weight: bold;
-            color: black;
-            text-decoration: none;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: #fff;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    a {
+      font-weight: bold;
+      color: black;
+      text-decoration: none;
+    }
 
-        /* Estilo para el texto con Edwardian */
-        .edwardian {
-            font-family: 'Edwardian', Arial, sans-serif; /* Fuente personalizada */
-            font-size: 20pt;
-        }
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+      outline: 1px dashed gray;
+    }
 
-        /* Resto de estilos existentes */
-        .logo-imagen {
-            width: 50px;
-            margin: 0 auto;
-            display: block;
-        }
+    .edwardian {
+      font-family: 'Edwardian', Arial, sans-serif;
+      font-size: 2rem;
+    }
 
-        img {
-            width: 50%;
-            max-width: 600px;
-            height: auto;
-            margin: 20px auto;
-            display: block;
-        }
+    .logo-imagen {
+      width: 50px;
+      margin: 0 auto;
+      display: block;
+    }
 
-        .contenido {
-            margin-bottom: 20px;
-        }
+    img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin: 20px auto;
+      display: block;
+    }
 
-        .texto-contenedor {
-            margin-top: 10px;
-        }
+    .contenido {
+      max-width: 90%;
+      margin: 0 auto 20px auto;
+      padding: 0 10px;
+    }
 
-        .email, .derecha {
-            text-align: right;
-            margin: 0;
-        }
+    .texto-contenedor {
+      margin-top: 10px;
+    }
 
-        .email {
-            font-style: italic;
-        }
+    .email,
+    .derecha {
+      text-align: right;
+      margin: 0;
+      padding: 0 10px;
+    }
 
-        .enlaces {
-            text-align: left;
-            margin: 0;
-            padding-left: 2px;
-        }
+    .email {
+      font-style: italic;
+    }
 
-        .enlaces a {
-            display: inline-block;
-            margin: 0;
-            padding: 2px 0;
-        }
+    nav.enlaces {
+      text-align: left;
+      padding-left: 10px;
+    }
 
-        .texto-final {
-            margin-top: 20px;
-            font-size: 12pt;
-            font-style: italic;
-            text-align: justify;
-        }
+    nav.enlaces a {
+      display: inline-block;
+      padding: 4px 0;
+    }
 
-        .texto-final-enlace {
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 20px;
-            color: red;
-            text-align: center;
-        }
-    </style>
+    footer {
+      margin-top: 30px;
+    }
+
+    /* MEDIA QUERIES PARA RESPONSIVE DESIGN */
+    @media (max-width: 768px) {
+      body {
+        font-size: 15px;
+      }
+
+      .edwardian {
+        font-size: 1.8rem;
+      }
+
+      nav.enlaces {
+        text-align: center;
+        padding-left: 0;
+      }
+
+      nav.enlaces a {
+        display: block;
+        padding: 6px 0;
+      }
+
+      .email,
+      .derecha {
+        text-align: center;
+        padding: 5px 0;
+      }
+
+      .logo-imagen {
+        width: 40px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        font-size: 14px;
+      }
+
+      .edwardian {
+        font-size: 1.5rem;
+      }
+
+      .logo-imagen {
+        width: 35px;
+      }
+
+      img {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="contenido">
-        <img class="logo-imagen" src="0036394745_20.jpg" alt="">
-
-        <div class="texto-contenedor">
-            
-            <p class="edwardian">Early XXI Century Music</p> <!-- Texto con Edwardian -->
-            <p>since 2018</p>
-        </div>
-        <div class="enlaces">
-            <a href="catálogo.html">catálogo</a>
-            <br>
-            <a href="en vivo.html">en vivo</a>
-            <br>
-            <a href="enlaces.html">enlaces</a>
-            <br>
-            <a href="etc.html">etc</a>
-        </div>
-        <p class="derecha"><a href="journal.html">diario/archivo</a></p>
-        <p class="email">hola@aglomeracion.org</p>
+  <header>
+    <img class="logo-imagen" src="0036394745_20.jpg" alt="Logo aglomeración" />
+    <div class="texto-contenedor">
+      <p class="edwardian">Early XXI Century Music</p>
+      <p>since 2018</p>
     </div>
+  </header>
 
-    <img src="a2115178569_10.jpg" alt="Imagen final">
+  <main class="contenido">
+    <nav class="enlaces">
+      <a href="catálogo.html">catálogo</a><br />
+      <a href="en vivo.html">en vivo</a><br />
+      <a href="enlaces.html">enlaces</a><br />
+      <a href="etc.html">etc</a>
+    </nav>
 
+    <p class="derecha">
+      <a href="journal.html">diario/archivo</a>
+    </p>
+    <p class="email">
+      <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+        data-cfemail="ee8681828fae8f898281838b9c8f8d878180c0819c89">[email&#160;protected]</a>
+    </p>
+  </main>
+
+  <footer>
+    <img src="a2115178569_10.jpg" alt="Imagen artística de fondo" />
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 </body>
 </html>
