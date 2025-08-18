@@ -11,6 +11,16 @@
             padding: 0;
         }
 
+        img { 
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        img.single {
+            width: 100%;
+        }
+
         .photo-container, .nuevas-fotos {
             display: flex;
             flex-wrap: wrap;
@@ -19,17 +29,12 @@
 
         .photo-pair {
             display: flex;
-            width: 100%; /* Ambas fotos juntas ocupan el ancho total */
+            width: 100%;
         }
 
         .photo-pair img {
-            width: 50%; /* Cada foto ocupa la mitad del ancho */
+            width: 50%;
             margin: 0;
-            display: block;
-        }
-
-        .photo-container img.single, .nuevas-fotos img.single {
-            width: 100%; /* Fotos individuales ocupan todo el ancho */
             display: block;
         }
 
@@ -44,114 +49,104 @@
             font-family: 'Times New Roman', Times, serif;
             font-size: 15px;
             color: red;
-            width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(10px, 1fr)); /* Distribuye las letras */
-            gap: 2px; /* Espacio entre letras */
+            width: 100%;
         }
 
         .texto-final-enlace a {
-            text-decoration: none; /* Opcional: elimina el subrayado del enlace */
-            color: inherit; /* Hereda el color del texto */
-            white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-            grid-column: 1 / -1; /* Ocupa todas las columnas del grid */
-            display: flex;
-            justify-content: space-between; /* Distribuye el espacio entre las letras */
+            text-decoration: none;
+            color: inherit;
+            white-space: normal;
+            overflow-wrap: anywhere;
+            display: inline;
         }
     </style>
 </head>
 <body>
-    <body>
-        <p class="texto-final-enlace">
+    <p class="texto-final-enlace">
         <a href="https://www.ninaprotocol.com/releases/por-siempre-vol-2">https://www.ninaprotocol.com/releases/por-siempre-vol-2</a>
-        <p class="texto-final-enlace">
+    </p>
+    <p class="texto-final-enlace">
         <a href="https://aglomeracion.bandcamp.com/album/por-siempre-vol-2">https://aglomeracion.bandcamp.com/album/por-siempre-vol-2</a>
-        <p class="texto-final-enlace">
+    </p>
+    <p class="texto-final-enlace">
         <a href="https://soundcloud.com/aglomeracion/sets/por-siempre-v2">https://soundcloud.com/aglomeracion/sets/por-siempre-v2</a>
-        <div class="nuevas-fotos" style="flex-wrap: nowrap; gap: 5px;">
+    </p>
+
+    <div class="nuevas-fotos" style="flex-wrap: nowrap; gap: 5px;">
         <img src="2025-08-14-0001.jpg" style="width: 33.33%;">
         <img src="2025-08-14-0002.jpg" style="width: 33.33%;">
         <img src="2025-08-14-0003.jpg" style="width: 33.33%;">
     </div>
-         <img src="portada.jpg" class="single">
-        
-         <img src="Untitled-1.png" class="single">
-        <p class="texto-final-enlace">
+
+    <img src="portada.jpg" class="single">
+    <img src="Untitled-1.png" class="single">
+
+    <p class="texto-final-enlace">
         <a href="https://soundcloud.com/aglomeracion/aisa-sana-kyy">https://soundcloud.com/aglomeracion/aisa-sana-kyy</a>
-        <p class="texto-final-enlace">
+    </p>
+    <p class="texto-final-enlace">
         <a href="https://www.ninaprotocol.com/releases/aisa-sana-kyy">https://www.ninaprotocol.com/releases/aisa-sana-kyy</a>
     </p>
-        <img src="Captura de pantalla 2025-06-22 a la(s) 15.27.07.png" class="single">
-        <p class="texto-final-enlace">
+
+    <img src="Captura de pantalla 2025-06-22 a la(s) 15.27.07.png" class="single">
+
+    <p class="texto-final-enlace">
         <a href="https://soundcloud.com/hkcrlive/dj-daddy-yonqui-invites-qe-02052025-4">https://soundcloud.com/hkcrlive/dj-daddy-yonqui-invites-qe-02052025-4</a>
     </p>
+
     <img src="WhatsApp Image 2025-05-05 at 19.48.27.jpeg" class="single">
+
     <div class="nuevas-fotos" style="flex-wrap: nowrap; gap: 5px;">
         <img src="falso documental.png" style="width: 33.33%;">
         <img src="segunda mordida.png" style="width: 33.33%;">
         <img src="aria.png" style="width: 33.33%;">
     </div>
-    <!-- Imagen DJ Daddy Yonqui -->
+
     <div class="nuevas-fotos">
         <img src="fotos/dj daddy yonqui.png" class="single">
     </div>
 
-    <!-- Enlace SoundCloud DJ Daddy Yonqui -->
     <p class="texto-final-enlace">
         <a href="https://soundcloud.com/aglomeracion/dj-daddy-yonqui-seis-anos-de-aglomeracion-pt-2-131224">https://soundcloud.com/aglomeracion/dj-daddy-yonqui-seis-anos-de-aglomeracion-pt-2-131224</a>
     </p>
 
-    <!-- Texto/Entrevista Felipe Ramos -->
     <p class="texto-final">
         Felipe Ramos es estudioso e intérprete de la música tradicional campesina de la zona centro-sur de Chile. Desde el año 2018 estudia junto a la investigadora de la cultura tradicional campesina Patricia Chavarria, y además toma contacto con algunas cantoras de la Región de Nuble de quienes aprende e interpreta su repertorio. Actualmente forma parte del equipo de trabajo del Archivo de Cultura Tradicional. 
-
         “¿Estas canciones no las aprendiste por tu trabajo de recopilación? 
-
-        Algunas sí, pero no es que sean todas canciones tradicionales. Algunas las cantan las cantoras, pero no son tradicionales chilenas. Aunque me acerqué a la música mexicana por haberme acercado al mundo de la gente del campo. Ahí empecé a gustar de la música mexicana, aunque fue como redimir algo, porque cuando yo era chico —y todavía ahora—, mi abuela solo escuchaba música mexicana.  La Radio Ñuble en Chillán tiene un programa que está al aire desde los años 60, que se llama El Mensajero Musical. Se transmite de lunes a sábado, desde las 7 a las 9. Es un programa icónico de la gente del campo de Ñuble. Antiguamente se usaba para enviarse mensajes, y ese programa lo escuchaba mi abuela… Es pura música mexicana que lleva sonando más de 50 años, y yo todavía lo escucho. Ojalá nunca se acabe El Mensajero Musical.” 
-
+        Algunas sí, pero no es que sean todas canciones tradicionales. Algunas las cantan las cantoras, pero no son tradicionales chilenas. Aunque me acerqué a la música mexicana por haberme acercado al mundo de la gente del campo. Ahí empecé a gustar de la música mexicana, aunque fue como redimir algo, porque cuando yo era chico —y todavía ahora—, mi abuela solo escuchaba música mexicana. La Radio Ñuble en Chillán tiene un programa que está al aire desde los años 60, que se llama El Mensajero Musical. Se transmite de lunes a sábado, desde las 7 a las 9. Es un programa icónico de la gente del campo de Ñuble. Antiguamente se usaba para enviarse mensajes, y ese programa lo escuchaba mi abuela… Es pura música mexicana que lleva sonando más de 50 años, y yo todavía lo escucho. Ojalá nunca se acabe El Mensajero Musical.” 
         Música acústica, una colección de canciones plañideras, una carta dirigida a las citas de Grindr encontradas y perdidas.
     </p>
 
-    <!-- Enlace Bandcamp Felipe Ramos -->
     <p class="texto-final-enlace">
         <a href="https://aglomeracion.bandcamp.com/album/canciones-mexicanas">https://aglomeracion.bandcamp.com/album/canciones-mexicanas</a>
     </p>
 
-    <!-- Imagen Felipe Ramos -->
     <div class="nuevas-fotos">
         <img src="fotos/Felipe Ramos.png" class="single">
     </div>
 
-    <!-- Fotos adicionales -->
     <div class="nuevas-fotos">
         <img src="fotos/FOTO.png" class="single">
         <img src="fotos/2025-02-01 a la(s) 07.10.26.png" class="single">
     </div>
 
-    <!-- Fotos iniciales en par -->
     <div class="photo-pair">
         <img src="WhatsApp Image 2024-12-25 at 15.50.35.jpeg">
         <img src="WhatsApp Image 2024-12-25 at 14.14.47.jpeg">
     </div>
 
-    <!-- Texto final -->
     <p class="texto-final">
         Un espectro recorre este fonograma digital y magnético: el espectro de Chile. Que tal fantasma y fantasía sea puro desfallecimiento, no implica que Aglomeración no se sienta inmensamente complacido de ofrecerlo a su público auditor. Tampoco es la tarea de este texto promocional tirar factos o plantear una actitud chill de cojones frente a la forma y contenido del fonograma: Aglomeración descarta completamente una apelación juvenil a su público. sin aspavientos y Trío Hogar decidieron realizar una publicación conjunta; luego de despejar la posibilidad de trabajar juntos —metodologías incompatibles— zanjaron que cada lado de 30 minutos de la cinta magnética fuera ocupado por su trabajo. El único punto en común es que la tarea técnico-fonográfica estaría a cargo de Fedor Cambiazo. Nada hacía presagiar que, a pesar de la labor separada, lo obrado se acerca a “lo mismo”. Ese “lo mismo” es el espectro de Chile (“Chile” no puede ser otra cosa que un espectro), la “escenografía musical vigente” (te lo dice Trío Hogar en su publicación en vivo 2024), “el sentido nacionalista en la música chilena” delirado por Roberto Escobar en 1961, los “fragmentos reverberados y no reverberados” utilizados para audio (partitura de B. Vásquez, 2024, realizada por sin aspavientos simultáneamente con la ejecución de sin título #11, 2013-19, de N. Carrasco), los perros que ladran ocasionalmente, las veredas que son regadas de tarde en tarde, las cuerdas tañidas con violencia, lo que el pueblo sabe sobre los ruidos en chileno. 
     </p>
 
-    <!-- Enlace justificado -->
     <p class="texto-final-enlace">
         <a href="https://aglomeracion.bandcamp.com/album/sin-aspavientos-tr-o-hogar">https://aglomeracion.bandcamp.com/album/sin-aspavientos-tr-o-hogar</a>
     </p>
 
-    <!-- Fotos antiguas -->
     <div class="photo-container" id="photo-container"></div>
 
     <script>
-        // Ruta a la carpeta con las fotos
         const photoFolder = 'fotos/'; 
-
-        // Array con las fotos antiguas
         const photoList = [
             '2023-03-14_23-54-42_UTC_1.jpg',
             '2023-03-14_23-54-42_UTC_2.jpg',
@@ -211,19 +206,14 @@
             '2024-12-11_21-34-31_UTC_4.jpg',
             '2024-12-11_21-34-31_UTC_5.jpg'
         ];
-        // Ordenar alfabéticamente en orden inverso
         photoList.sort().reverse();
-        
-        // Seleccionar el contenedor de fotos antiguas
         const container = document.getElementById('photo-container');
-
-        // Crear elementos para las fotos antiguas y agregarlas al contenedor
         photoList.forEach((photo) => {
             const img = document.createElement('img');
-            img.src = photoFolder + photo; // Ruta completa de cada foto
-            img.alt = photo; // Texto alternativo
-            img.classList.add('single'); // Clase para estilos individuales
-            container.appendChild(img); // Agrega la foto al contenedor de fotos antiguas
+            img.src = photoFolder + photo;
+            img.alt = photo;
+            img.classList.add('single');
+            container.appendChild(img);
         });
     </script>
 </body>
