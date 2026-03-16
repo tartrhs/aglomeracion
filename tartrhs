@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>etc</title>
+    <style>
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    text-align: center;
+}
+
+img {
+    width: 150px;
+    display: block;
+    margin: 20px auto;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+}
+</style>
+</head>
+<body>
+  <img src="tartrhs.jpg" alt="t*****s">
+
+    <div>
+        <b><a href="https://www.ninaprotocol.com/releases/tartrhs-t-s" target="_blank">nina protocol</a></b><br>
+    </div>
+    <div>
+        <b><a href="https://tartrhs.bandcamp.com/album/t-s" target="_blank">bandcamp</a></b><br>
+    </div>
+    <div>
+        <b><a href="https://www.youtube.com/watch?v=cBoFmsVH2zQ&list=OLAK5uy_nmh1EEhLm-2HT04u34Iuz7OgwyjMKRLu0" target="_blank">youtube music</a></b><br>
+    </div>
+    <div>
+        <b><a href="https://music.apple.com/cl/album/t-s-single/1885021452" target="_blank">apple music</a></b><br>
+    </div>
+    <div>
+        <b><a href="https://open.spotify.com/intl-es/album/6rbSS9QiGKfMYTyVzF1J5s?si=23ci7mLoRB-YBM9iTjMCfw" target="_blank">spotify</a></b><br>
+    </div>
+</body>
+</html>
+
