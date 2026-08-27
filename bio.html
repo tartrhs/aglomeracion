@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ig bio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: #ffffff;
+            color: #000000;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* cabecera */
+        .profile {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .profile h1 {
+            margin: 0 0 8px 0;
+            font-size: 22px;
+            font-weight: normal;
+        }
+
+        .profile p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* publicaciones */
+        .post {
+            display: block;
+            text-decoration: none;
+            color: #000000;
+            margin-bottom: 50px;
+        }
+
+        .post img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .caption {
+            margin-top: 12px;
+            font-size: 14px;
+            line-height: 1.45;
+            text-align: left;
+        }
+
+        /* mouse */
+        .post:hover img {
+            opacity: 0.92;
+        }
+
+        /* celu */
+        @media (max-width: 600px) {
+            body {
+                padding: 25px 15px;
+            }
+
+            .profile {
+                margin-bottom: 35px;
+            }
+
+            .post {
+                margin-bottom: 40px;
+            }
+
+            .caption {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- PERFIL -->
+        <header class="profile">
+            <p>@aglomeracion</p>
+        </header>
+
+
+        <!-- PUBLICACIÓN 1 -->
+        <a class="post"
+           href="https://youtu.be/T4ZgDE6S7ts"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <img src="tartrhs&vilaret - untitled1.jpg" alt="untitled1">
+
+            <div class="caption">
+                untitled1
+            </div>
+
+        </a>
+
+
+        <!-- PUBLICACIÓN 2 -->
+        <a class="post"
+           href="https://www.instagram.com/p/YYYYYYYYYYY/"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <img src="imagenes/post-02.jpg" alt="Publicación 2">
+
+            <div class="caption">
+                Segunda publicación y su descripción.
+            </div>
+
+        </a>
+
+
+        <!-- PUBLICACIÓN 3 -->
+        <a class="post"
+           href="https://www.instagram.com/p/ZZZZZZZZZZZ/"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <img src="imagenes/post-03.jpg" alt="Publicación 3">
+
+            <div class="caption">
+                Tercera publicación y su descripción.
+            </div>
+
+        </a>
+
+
+        <!-- PUBLICACIÓN 4 -->
+        <a class="post"
+           href="https://www.instagram.com/p/AAAAAAAAAAA/"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <img src="imagenes/post-04.jpg" alt="Publicación 4">
+
+            <div class="caption">
+                Cuarta publicación y su descripción.
+            </div>
+
+        </a>
+
+    </main>
+
+</body>
+</html>
