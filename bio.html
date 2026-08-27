@@ -20,7 +20,8 @@
         }
 
         .container {
-            max-width: 450px;
+            width: 100%;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
@@ -30,36 +31,36 @@
             margin-bottom: 45px;
         }
 
-        .profile h1 {
-            margin: 0 0 8px 0;
-            font-size: 22px;
-            font-weight: normal;
-        }
-
         .profile p {
             margin: 0;
             font-size: 14px;
         }
 
-        /* publicaciones */
+        /* publicaciones - 4 columnas */
+        .posts {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 25px;
+            row-gap: 45px;
+        }
+
         .post {
             display: block;
             text-decoration: none;
             color: #000000;
-            margin-bottom: 50px;
         }
 
         .post img {
             display: block;
             width: 100%;
             height: auto;
-            margin: 0 auto;
+            margin: 0;
         }
 
         .caption {
-            margin-top: 12px;
-            font-size: 14px;
-            line-height: 1.45;
+            margin-top: 10px;
+            font-size: 13px;
+            line-height: 1.4;
             text-align: left;
         }
 
@@ -68,8 +69,17 @@
             opacity: 0.92;
         }
 
+        /* tablet */
+        @media (max-width: 900px) {
+            .posts {
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 20px;
+                row-gap: 40px;
+            }
+        }
+
         /* celu */
-        @media (max-width: 450px) {
+        @media (max-width: 500px) {
             body {
                 padding: 25px 15px;
             }
@@ -78,8 +88,9 @@
                 margin-bottom: 35px;
             }
 
-            .post {
-                margin-bottom: 40px;
+            .posts {
+                grid-template-columns: 1fr;
+                row-gap: 40px;
             }
 
             .caption {
@@ -98,177 +109,188 @@
             <p>@aglomeracion</p>
         </header>
 
+        <section class="posts">
 
-        <!-- PUBLICACIÓN 1 -->
-        <a class="post"
-           href="https://youtu.be/T4ZgDE6S7ts"
-           target="_blank"
-           rel="noopener noreferrer">
+            <!-- PUBLICACIÓN 1 -->
+            <a class="post"
+               href="https://youtu.be/T4ZgDE6S7ts"
+               target="_blank"
+               rel="noopener noreferrer">
 
-            <img src="tartrhs&vilaret - untitled1.jpg" alt="untitled1">
+                <img src="tartrhs&vilaret - untitled1.jpg" alt="untitled1">
 
-            <div class="caption">
-                tartrhs & vilaret - untitled1 videoclip
-            </div>
+                <div class="caption">
+                    tartrhs & vilaret - untitled1 videoclip
+                </div>
 
-        </a>
-
-
-        <!-- PUBLICACIÓN 2 -->
-        <a class="post"
-           href="https://soundcloud.com/aglomeracion/rroo-temuco-25-07-26"
-           target="_blank"
-           rel="noopener noreferrer">
-
-            <img src="rrooootemuco2.png" alt="rroo live">
-
-            <div class="caption">
-                r.r.o.o @ temuco - 25.07.26
-            </div>
-
-        </a>
+            </a>
 
 
-        <!-- PUBLICACIÓN 3 -->
-        <a class="post"
-           href="orden-imperial.html"
-           target="_blank"
-           rel="noopener noreferrer">
+            <!-- PUBLICACIÓN 2 -->
+            <a class="post"
+               href="https://soundcloud.com/aglomeracion/rroo-temuco-25-07-26"
+               target="_blank"
+               rel="noopener noreferrer">
 
-            <img src="tartrhs & arboretum - orden imperial.png" alt="orden imperial">
+                <img src="rrooootemuco2.png" alt="rroo live">
 
-            <div class="caption">
-                tartrhs & arboretum - orden imperial videoclip
-            </div>
+                <div class="caption">
+                    r.r.o.o @ temuco - 25.07.26
+                </div>
 
-        </a>
+            </a>
 
 
-        <!-- PUBLICACIÓN 4 -->
-        <a class="post"
-           href="https://soundcloud.com/aglomeracion/mix-de-gabriel-garz-n-para"
-           target="_blank"
-           rel="noopener noreferrer">
+            <!-- PUBLICACIÓN 3 -->
+            <a class="post"
+               href="orden-imperial.html"
+               target="_blank"
+               rel="noopener noreferrer">
 
-            <img src="MIX BUBA.png" alt="mix de gabriel">
+                <img src="tartrhs & arboretum - orden imperial.png" alt="orden imperial">
 
-            <div class="caption">
-                mix de gabriel garzón para aglomeración, julio 2026
-            </div>
+                <div class="caption">
+                    tartrhs & arboretum - orden imperial videoclip
+                </div>
 
-        </a>
+            </a>
 
-         <!-- PUBLICACIÓN 5 -->
-        <a class="post"
-           href="https://soundcloud.com/aglomeracion/mix-de-aria-para-aglomeraci-n"
-           target="_blank"
-           rel="noopener noreferrer">
 
-            <img src="arita.png" alt="mix de aria">
+            <!-- PUBLICACIÓN 4 -->
+            <a class="post"
+               href="https://soundcloud.com/aglomeracion/mix-de-gabriel-garz-n-para"
+               target="_blank"
+               rel="noopener noreferrer">
 
-            <div class="caption">
-                mix de aria para aglomeración, abril 2026
-            </div>
+                <img src="MIX BUBA.png" alt="mix de gabriel">
 
-        </a>
+                <div class="caption">
+                    mix de gabriel garzón para aglomeración, julio 2026
+                </div>
 
-        <!-- PUBLICACIÓN 6 -->
-        <a class="post"
-           href="https://soundcloud.com/aglomeracion/rroo-club-de-fans-21-03-26"
-           target="_blank"
-           rel="noopener noreferrer">
+            </a>
 
-            <img src="2026-04-07-00012.png" alt="mix de aria">
 
-            <div class="caption">
-                rroo @ club de fans, 21.03.26
-            </div>
+            <!-- PUBLICACIÓN 5 -->
+            <a class="post"
+               href="https://soundcloud.com/aglomeracion/mix-de-aria-para-aglomeraci-n"
+               target="_blank"
+               rel="noopener noreferrer">
 
-        </a>
+                <img src="arita.png" alt="mix de aria">
 
-        <!-- PUBLICACIÓN 7 -->
-        <a class="post"
-           href="untitled1.html"
-           target="_blank"
-           rel="noopener noreferrer">
+                <div class="caption">
+                    mix de aria para aglomeración, abril 2026
+                </div>
 
-            <img src="tartrhs&vilaret - untitled1.jpg" alt="untitled1">
+            </a>
 
-            <div class="caption">
-                tartrhs & vilaret - untitled1
-            </div>
 
-        </a>
+            <!-- PUBLICACIÓN 6 -->
+            <a class="post"
+               href="https://soundcloud.com/aglomeracion/rroo-club-de-fans-21-03-26"
+               target="_blank"
+               rel="noopener noreferrer">
 
-         <!-- PUBLICACIÓN 8 -->
-        <a class="post"
-           href="https://soundcloud.com/aglomeracion/ensayo-1"
-           target="_blank"
-           rel="noopener noreferrer">
+                <img src="2026-04-07-00012.png" alt="mix de aria">
 
-            <img src="nevada - ensayo1.png" alt="nevada">
+                <div class="caption">
+                    rroo @ club de fans, 21.03.26
+                </div>
 
-            <div class="caption">
-                nevada - ensayo 1
-            </div>
+            </a>
 
-        </a>
 
-         <!-- PUBLICACIÓN 9 -->
-        <a class="post"
-           href="https://soundcloud.com/hkcrlive/dj-daddy-yonqui-invites-tartrhs-07112025-1"
-           target="_blank"
-           rel="noopener noreferrer">
+            <!-- PUBLICACIÓN 7 -->
+            <a class="post"
+               href="untitled1.html"
+               target="_blank"
+               rel="noopener noreferrer">
 
-            <img src="07.11.25 DJ Daddy Yonqui.jpg" alt="tartrhs mix">
+                <img src="tartrhs&vilaret - untitled1.jpg" alt="untitled1">
 
-            <div class="caption">
-               tartrhs mix para hong kong community radio
-            </div>
+                <div class="caption">
+                    tartrhs & vilaret - untitled1
+                </div>
 
-        </a>
+            </a>
 
-        <!-- PUBLICACIÓN 10 -->
-        <a class="post"
-           href="https://soundcloud.com/aglomeracion/sets/musica-masiva"
-           target="_blank"
-           rel="noopener noreferrer">
 
-            <img src="Plantilla Portada Bandcamp CD 1 (1).jpg" alt="comunicado">
+            <!-- PUBLICACIÓN 8 -->
+            <a class="post"
+               href="https://soundcloud.com/aglomeracion/ensayo-1"
+               target="_blank"
+               rel="noopener noreferrer">
 
-            <div class="caption">
-               comunicado - música masiva
-            </div>
+                <img src="nevada - ensayo1.png" alt="nevada">
 
-        </a>
+                <div class="caption">
+                    nevada - ensayo 1
+                </div>
 
-        <!-- PUBLICACIÓN 11 -->
-        <a class="post"
-           href="https://soundcloud.com/aglomeracion/mix-de-serial-para-aglomeracion-septiembre-2025"
-           target="_blank"
-           rel="noopener noreferrer">
+            </a>
 
-            <img src="serial-2F.png" alt="serial">
 
-            <div class="caption">
-               mix de serial para aglomeración, septiembre 2025
-            </div>
+            <!-- PUBLICACIÓN 9 -->
+            <a class="post"
+               href="https://soundcloud.com/hkcrlive/dj-daddy-yonqui-invites-tartrhs-07112025-1"
+               target="_blank"
+               rel="noopener noreferrer">
 
-        </a>
+                <img src="07.11.25 DJ Daddy Yonqui.jpg" alt="tartrhs mix">
 
-         <!-- PUBLICACIÓN 12 -->
-        <a class="post"
-           href="https://soundcloud.com/aglomeracion/mix-de-serial-para-aglomeracion-septiembre-2025"
-           target="_blank"
-           rel="noopener noreferrer">
+                <div class="caption">
+                    tartrhs mix para hong kong community radio
+                </div>
 
-            <img src="serial-2F.png" alt="serial">
+            </a>
 
-            <div class="caption">
-               mix de serial para aglomeración, septiembre 2025
-            </div>
 
-        </a>
+            <!-- PUBLICACIÓN 10 -->
+            <a class="post"
+               href="https://soundcloud.com/aglomeracion/sets/musica-masiva"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <img src="Plantilla Portada Bandcamp CD 1 (1).jpg" alt="comunicado">
+
+                <div class="caption">
+                    comunicado - música masiva
+                </div>
+
+            </a>
+
+
+            <!-- PUBLICACIÓN 11 -->
+            <a class="post"
+               href="https://soundcloud.com/aglomeracion/mix-de-serial-para-aglomeracion-septiembre-2025"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <img src="serial-2F.png" alt="serial">
+
+                <div class="caption">
+                    mix de serial para aglomeración, septiembre 2025
+                </div>
+
+            </a>
+
+
+            <!-- PUBLICACIÓN 12 -->
+            <a class="post"
+               href="https://soundcloud.com/aglomeracion/mix-de-serial-para-aglomeracion-septiembre-2025"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <img src="serial-2F.png" alt="serial">
+
+                <div class="caption">
+                    mix de serial para aglomeración, septiembre 2025
+                </div>
+
+            </a>
+
+        </section>
 
     </main>
 
